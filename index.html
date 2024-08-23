@@ -1,14 +1,1703 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Lab # 1</title>
+    <title>Виробництво хлібобулочних виробів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #A0522D;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #8B4513;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #8B4513;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #A0522D;
+            color: #fff;
+        }
+    </style>
 </head>
-<script src="js/myscript.js"></script>
 <body>
-    <h1 class="main"> Next </h1>
-    <p>  <b>  text </b></p>
+    <header>
+        <h1>Виробництво хлібобулочних виробів "Смаколик"</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#products">Продукція</a></li>
+            <li><a href="#table">Таблиця продукції</a></li>
+            <li><a href="#form">Форма замовлення</a></li>
+            <li><a href="#media">Медіа</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Розділ "Головна" -->
+        <section id="home">
+            <h2 dir="ltr" class="section-heading" style="color: #8B4513;">Ласкаво просимо!</h2>
+            <p style="font-size: 18px; text-align: justify;" dir="ltr">
+                Наша компанія спеціалізується на виробництві смачних та свіжих хлібобулочних виробів. Ми використовуємо тільки найкращі інгредієнти та традиційні рецепти для створення продукції, яку люблять наші клієнти.
+            </p>
+        </section>
+
+        <!-- Розділ "Про нас" -->
+        <section id="about">
+            <h3 title="Детальніше про компанію" align="left" id="subheading-about">Про нашу компанію</h3>
+            <p style="font-size: 16px;" dir="ltr" align="left">
+                Ми виробляємо хліб, булочки, батони та інші вироби, що відповідають найвищим стандартам якості. Наша місія – забезпечити людей свіжим та корисним хлібом щодня.
+            </p>
+        </section>
+
+        <!-- Розділ "Продукція" -->
+        <section id="products">
+            <h4 lang="uk" id="heading-products" class="small-heading">Наша продукція</h4>
+            <p>
+                У нашому асортименті ви знайдете різноманітні види хлібобулочних виробів:
+            </p>
+            <ul>
+                <li>Батони</li>
+                <li>Булочки з маком</li>
+                <li>Ржані хліби</li>
+                <li>Пшеничні хліби</li>
+            </ul>
+        </section>
+
+        <!-- Розділ "Таблиця продукції" -->
+        <section id="table">
+            <h2 class="section-heading" style="color: #8B4513;">Таблиця нашої продукції</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Вид</th>
+                        <th>Сорт</th>
+                        <th>Матеріал</th>
+                        <th>Постачальник</th>
+                        <th>Термін придатності</th>
+                        <th>Ціна (грн)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Батон</td>
+                        <td>Вищий</td>
+                        <td>Пшеничне борошно</td>
+                        <td>Постачальник А</td>
+                        <td>5 днів</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Булочка з маком</td>
+                        <td>Перший</td>
+                        <td>Пшеничне борошно</td>
+                        <td>Постачальник Б</td>
+                        <td>4 дні</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Розділ "Форма замовлення" -->
+        <section id="form">
+            <h3 id="form-title" align="center" title="Форма для замовлення">Форма замовлення продукції</h3>
+            <form>
+                <label for="type">Вид продукції:</label>
+                <input type="text" id="type" name="type" required><br><br>
+
+                <label for="grade">Сорт:</label>
+                <input type="text" id="grade" name="grade" required><br><br>
+
+                <label for="material">Матеріал:</label>
+                <input type="text" id="material" name="material" required><br><br>
+
+                <label for="supplier">Постачальник:</label>
+                <input type="text" id="supplier" name="supplier" required><br><br>
+
+                <label for="expiration">Термін придатності:</label>
+                <input type="text" id="expiration" name="expiration" required><br><br>
+
+                <label for="price">Ціна:</label>
+                <input type="number" id="price" name="price" required><br><br>
+
+                <input type="submit" value="Замовити">
+            </form>
+        </section>
+
+        <!-- Розділ "Медіа" -->
+        <section id="media">
+            <h4 lang="uk" id="heading-media" class="small-heading">Медіа</h4>
+            <h2 class="section-heading" style="color: #8B4513;">Процес виробництва</h2>
+            <video controls style="max-width: 100%;">
+                <source src="video.mp4" type="video/mp4">
+                Ваш браузер не підтримує відтворення відео.
+            </video>
+
+            <h3 title="Аудіо про компанію" id="audio-heading">Аудіо про нашу фірму</h3>
+            <audio controls style="margin-top: 20px;">
+                <source src="audio.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує відтворення аудіо.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Виробництво хлібобулочних виробів "Смаколик". Усі права захищені.</p>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
